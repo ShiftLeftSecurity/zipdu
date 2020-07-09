@@ -1,0 +1,36 @@
+plugins {
+  id 'com.github.johnrengelman.shadow' version '6.0.0'
+  id 'application'
+  id 'scala'
+}
+
+dependencies {
+  implementation 'org.scala-lang:scala-library:2.11.12'
+  implementation 'com.sparkjava:spark-core:2.9.1'
+  implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+repositories {
+    jcenter()
+    maven {
+        name = 'typesafe-maven-release'
+        url = 'https://repo.typesafe.com/typesafe/maven-releases'
+    }
+}
+
+shadowJar {
+  archiveBaseName = 'zipdu'
+  archiveVersion = '0.0.1'
+
+  minimize()
+}
+
+sourceSets {
+    main {
+        scala {
+            srcDir '.'
+        }
+    }
+}
+
+mainClassName = 'ZipDu'
