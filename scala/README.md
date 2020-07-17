@@ -6,4 +6,4 @@
 
 **Second**, run `make install`, which will build `zipdu` and put the executable jar inside the root folder of this repository.
 
-**Finally**, follow the main README instructions in the root folder of this repository for how to run `zipdu` and execute the zip bomb and zip slip attacks.
+**Finally**, follow the main README instructions in the root folder of this repository for how to run `zipdu` and execute the zip bomb and directory traversal attacks.
