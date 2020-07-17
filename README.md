@@ -1,7 +1,7 @@
 ## zipdu
 
 zipdu is a web service which exposes an HTTP endpoint that accepts a zip file upload as input and returns its inflated byte size and number of contained files in a JSON-formatted response.
-zipdu is vulnerable to zip bombs and zip slip attacks.
+zipdu is vulnerable to zip bombs and directory traversal attacks.
 
 ----------
 
@@ -40,21 +40,21 @@ If you _really_ don't care about messing up the system `zipdu` is running on, th
 
 ----------
 
-### How to execute the zip slip attack
+### How to execute the directory traversal attack
 
 **First**, set up `zipdu` for your language of choice, and run it from the root folder of this repository.
 
 **Second**, check the contents of the `execution.sh` script found in the root folder of this repository:
 
 ```bash
-// this file will be overwritten if the zip slip attack is successfull
+// this file will be overwritten if the directory traversal attack is successfull
 $ cat execution.sh 
 #!/usr/bin/env bash
 
 echo "Harmless NOOP executed successfully."
 ```
 
-**Third**, execute the zip slip attack by sending the specially crafted zip archive found under `slips/slipwell.zip`:
+**Third**, execute the directory traversal attack by sending the specially crafted zip archive found under `slips/slipwell.zip`:
 
 ```bash
 $ curl -XPOST -F file=@slips/slipwell.zip http://localhost:8000/zipstats
