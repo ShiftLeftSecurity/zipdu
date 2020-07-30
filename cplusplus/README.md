@@ -1,9 +1,5 @@
 ### zipdu C++ implementation
 
-https://github.com/conan-io/examples/tree/master/libraries/poco/md5
-
-https://pocoproject.org/docs/00100-GuidedTour.htmmd5l
-
 ### Setup
 
 **First**, ensure your conan installation is working correctly [https://docs.conan.io/en/latest/installation.html](https://docs.conan.io/en/latest/installation.html).
