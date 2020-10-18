@@ -30,7 +30,7 @@ func (h zipstatsHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	// max file size of 10MB
 	r.ParseMultipartForm(10 << 20)
 
-	file, fileHeader, err := r.FormFile("file")
+	file, _, err := r.FormFile("file")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
 		return
@@ -128,7 +128,7 @@ func main() {
 
 	uploadsDirectoryPath := "uploads"
 	_, err := os.Stat(uploadsDirectoryPath)
-	if os.IsNotExit(err) {
+	if os.IsNotExist(err) {
 		log.Fatal("Could not find the `uploads` directory in the folder you executed zipdu in. Exitting.")
 	}
 
