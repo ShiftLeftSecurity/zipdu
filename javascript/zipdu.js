@@ -11,7 +11,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 const app = express();
 
-const port = 3000;
+const port = 8000;
 
 const uploadsFolder = "uploads";
 // check if uploads directory exists and exit if not

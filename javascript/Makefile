@@ -3,8 +3,8 @@ INDEX_JS_OUT = dist/index.js
 
 .PHONY: build
 build:
-	@yarn install
-	@yarn makeDist
+	@yarnpkg install
+	@yarnpkg makeDist
 
 .PHONY: install
 install: build
