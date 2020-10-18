@@ -4,7 +4,7 @@
 
 **First**, ensure your Golang installation is working correctly [https://golang.org/doc/install#testing](https://golang.org/doc/install#testing).
 
-**Second**, run `make install`, which will build `zipdu` and put the executable inside the root folder of this repository.
+**Second**, run `make install`, which will build a native executable for `zipdu` and place it inside the root folder of this repository.
 
-**Finally**, follow the main README instructions in the root folder of this repository for how to run `zipdu` and execute the zip bomb and directory traversal attacks.
+**Finally**, in order to run`zipdu` and execute the zip bomb and zip slip attacks, follow the instructions in the README found in the root folder of this repository.
 

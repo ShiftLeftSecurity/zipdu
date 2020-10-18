@@ -9,13 +9,29 @@ zipdu is vulnerable to zip bombs and directory traversal attacks.
 
 **First**, follow the README instructions in the language directory of your choice to prepare `zipdu` for execution.
 
-**Second**, run `zipdu` in a terminal session from the root folder of this repository and check that it responds to HTTP requests using a tool like `curl` to send a GET request to the `/health` endpoint:
+**Second**, run `zipdu` in a terminal session from the root folder of this repository:
 
 ```bash
-// first terminal session
+// --------------------
+// for native binaries [go, cplusplus]
 $ ./zipdu
 Starting server on port 8000
+// --------------------
+
+// --------------------
+// for a jar [java, scala]
+$ java -jar zipdu-0.0.1-all.jar
+// ...trimmed output
+// 2020-10-18 16:19:48.518:INFO:oejs.Server:Thread-0: Started @154ms
+// --------------------
+
+// --------------------
+// for a javascript file
+$ node zipdu-0.0.1-all.jar
+// --------------------
 ```
+
+**Third**, using a tool like `curl`, confirm that your process responds to HTTP requests against the `/health` endpoint:
 
 ```bash
 // second terminal session
