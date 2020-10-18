@@ -2,7 +2,7 @@
 
 ### Setup
 
-**First**, ensure that your _NodeJS_ and _yarn_ installations are working correctly.
+**First**, ensure that your _NodeJS_ and [yarnpkg](https://yarnpkg.com/) installations are working correctly.
 
 **Second**, run `make install`, which will bundle the `zipdu` NodeJS implementation into a single js file and move it to the root folder of this repository.
 
