@@ -2,8 +2,8 @@
 
 ### Setup
 
-**First**, ensure that your _NodeJS_ and _yarn_ installations are working correctly.
+**First**, ensure that your _NodeJS_ and [yarnpkg](https://yarnpkg.com/) installations are working correctly.
 
-**Second**, run `make install`, which will bundle the `zipdu` NodeJS implementation into a single js file and move it to the root folder of this repository.
+**Second**, run `make install`, which will build a standalone js bundle for `zipdu` and place it inside the root folder of this repository.
 
-**Finally**, follow the main README instructions in the root folder of this repository for how to execute the zip bomb and directory traversal attacks.
+**Finally**, in order to run`zipdu` and execute the zip bomb and zip slip attacks, follow the instructions in the README found in the root folder of this repository.
