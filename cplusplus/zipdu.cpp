@@ -197,7 +197,7 @@ class Server: public Poco::Util::ServerApplication {
 
   protected:
   int main(const std::vector<std::string>& args) {
-    HTTPServer srv(new HandlerFactory(this->uploadsDirectoryPath), ServerSocket(8080), new HTTPServerParams);
+    HTTPServer srv(new HandlerFactory(this->uploadsDirectoryPath), ServerSocket(8000), new HTTPServerParams);
     srv.start();
     waitForTerminationRequest();
     srv.stop();
