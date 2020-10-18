@@ -30,6 +30,8 @@ object ZipDu {
       System.exit(1)
     }
 
+    port(8000)
+
     // health route
     get("/health", new Route {
       override def handle(request: Request, response: Response): String = {
