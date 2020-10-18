@@ -1,9 +1,9 @@
 INSTALL_DIR = ../
-JAR_OUT = build/libs/zipdu-0.0.1-all.jar
+JAR_OUT = target/scala-2.12/zipdu-assembly-0.0.1.jar
 
 .PHONY: build
 build:
-	@gradle shadowJar
+	@sbt assembly
 
 .PHONY: install
 install: build
